@@ -9,13 +9,15 @@ import './App.css'
 import { useState } from 'react'
 import LoginPopUp from './Components/LoginPopUp/LoginPopUp'
 
+
 const App = () => {
 
   const [showLogin, setShowLogin] = useState(false)
 
   return (
     <>
-    { showLogin ? <LoginPopUp/> : <> </> }
+    { showLogin ? <LoginPopUp setShowLogin={setShowLogin}/> : <> </> }
+
     <div className='app'>
       <Navbar setShowLogin={setShowLogin} />
       <Routes>
