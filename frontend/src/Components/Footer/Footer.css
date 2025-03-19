@@ -47,3 +47,29 @@
     margin: 20px 0;
     height: 2px;
 }
+
+
+@media (max-width: 750px) {
+    .footer-content-center{
+        align-items: center;
+        text-align: center;
+    }
+    .footer-content-left{
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content-right{
+        align-items: center;
+        text-align: center;
+       
+    }
+    .footer-content{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-copy-right{
+        text-align: center;
+    }
+}
