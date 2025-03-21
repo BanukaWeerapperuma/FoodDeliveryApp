@@ -10,7 +10,7 @@
 .login-popup-container{
     place-self: center;
     width: max(23vw , 330px);
-    color: rgb(240, 224, 224);
+    color: rgb(170, 157, 157);
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,6 @@
     animation: fadeIn 0.5s;
 }
 
-
 .login-popup-title{
     display: flex;
     justify-content: space-between;
@@ -29,12 +28,10 @@
     color: black;
 }
 
-
 .login-popup-title img{
     width: 16px;
     cursor: pointer;
 }
-
 
 .login-popup-inputs{
     display: flex;
@@ -46,10 +43,8 @@
     outline: none;
     padding: 10px;
     border: 1px solid rgb(240, 224, 224);
-    border-radius: 5px;
-    
+    border-radius: 5px;   
 }
-
 
 .login-popup-container button{
     padding: 10px;
@@ -77,4 +72,8 @@
     color: tomato;
     cursor: pointer;
     font-weight: 500;
+}
+
+.login-popup p span:hover{
+    text-decoration: underline;
 }
