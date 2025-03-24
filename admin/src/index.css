@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+hr{
+  border: none;
+  border-top: 1px solid #a9a9a9;
+}
+
+.app-content{
+  display: flex;
+}
