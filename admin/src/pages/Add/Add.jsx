@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Add.css";
 import { assets } from "../../assets/assets";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Add = () => {
   const url = "http://localhost:4000";
@@ -46,12 +47,13 @@ const Add = () => {
         setData({ name: "", description: "", price: "", category: "Salad" });
         setImage(null);
         setPreview(null);
+        toast.success(response.data.message);
       } else {
         alert("Failed to add item. Please try again.");
       }
     } catch (error) {
+      toast.error(response.data.message);
       console.error("Error adding item:", error);
-      alert("An error occurred. Please try again.");
     }
   };
 
