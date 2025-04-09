@@ -4,9 +4,10 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
+
+
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount , url } =
-    useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount , url } = useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -25,7 +26,7 @@ const Cart = () => {
         {food_list.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
-              <div>
+              <div key={item._id}> {/* Add unique key here */}
                 <div className="cart-items-title cart-items-item">
                   <img src={url+"/images/"+item.image} alt="" />
                   <p>{item.name}</p>
@@ -68,7 +69,7 @@ const Cart = () => {
         </div>
         <div className="cart-promocode">
           <div>
-            <p>If ypu have a promo code , Enter it here</p>
+            <p>If you have a promo code, enter it here</p>
             <div className="cart-promocode-input">
               <input type="text" placeholder="promo code" />
               <button>Submit</button>
