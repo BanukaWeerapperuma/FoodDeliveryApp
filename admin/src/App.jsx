@@ -6,6 +6,7 @@ import Add from './pages/Add/Add'
 import List from './pages/List/List'
 import Order from './pages/Orders/Order'
 import { ToastContainer } from 'react-toastify';
+import Login from './components/Login/Login'
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
          <div className="app-content">
           <SideBar />
           <Routes>
+           <Route path="/" element={<Login url={url}/>} />
             <Route path="/add" element={<Add url={url}/>} />
             <Route path="/list" element={<List url={url}/>} />
             <Route path="/orders" element={<Order url={url}/>} />
