@@ -1,16 +1,15 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    cartData : {type: Object, default : {}},
+    role: { type: String, default:"user" },
+    cartData: { type: Object, default: {} },
+  },
+  { minimize: false }
+);
 
-} , {minimize : false})
-
-// if user model is already created then use it otherwise create new one
-const userModel = mongoose.models.user || mongoose.model("User", userSchema); 
-
-
-
+const userModel = mongoose.model.user || mongoose.model("user", userSchema);
 export default userModel;
