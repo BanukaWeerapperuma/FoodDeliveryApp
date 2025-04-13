@@ -6,9 +6,6 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
-
-
-
 const PlaceOrder = () => {
 
   const {getTotalCartAmount , token , food_list , cartItems , url} = useContext(StoreContext);
